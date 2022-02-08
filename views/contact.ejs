@@ -1,0 +1,55 @@
+<% include partials/header.ejs %>
+<%- include partials/main_nav.ejs %>
+<!-- Assignmen1 - Mahmoud Eltoukhy - 301171598 - 2022-02-06-->
+<!-- cotact page -->
+  <h1><%= title %></h1>
+  <h3>Welcome to my <%= title %> page!</h3>
+  <h6>
+    If you’d like to get in touch with me, 
+    Please fill out this form <span lang="en-ca">.</span><br><br>* 
+    indicates a required field</h6>
+    <form method="post" action="mailto:abc@yahoo.com">
+      <table id="Contact" style="width: 100%">
+        <tr>
+          <td style="width: 117px"><span lang="en-ca">First Name:*</span></td>
+          <td colspan="2"><span lang="en-ca">
+          <input name="txtFirst" size="20" tabindex="1" type="text" required="required"></span></td>
+        </tr>
+        <tr>
+          <td style="width: 117px"><span lang="en-ca">Last Name:*</span></td>
+          <td colspan="2"><span lang="en-ca">
+          <input name="txtLast" size="20" tabindex="3" type="text" required="required"></span></td>
+        </tr>
+        <tr>
+          <td style="width: 117px"><span lang="en-ca">Email:*</span></td>
+          <td colspan="2"><span lang="en-ca">
+          <input name="txtEmail" size="25" tabindex="5" type="Email" required="required"></span></td>
+        </tr>
+        
+        <tr>
+          <td colspan="3"><span lang="en-ca"> leave us a message:</span></td>
+        </tr>
+        <tr>
+          <td colspan="3"><span lang="en-ca">
+          <textarea cols="50" name="txtMsg" rows="7" tabindex="13" placeholder="~ send any comment or questions ~"></textarea></span></td>
+          
+    
+        </tr>
+        <tr>
+          <td colspan="3">
+          <input id="send" name="BtnSubmit" tabindex="55" type="submit" value="Send Your Form"><span lang="en-ca">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </span>
+          <input name="BtnReset" tabindex="57" type="reset" value="Start Over!"></td>
+          <td>
+          &nbsp;</td>
+        </tr>
+      </table>
+      <span lang="en-ca"><br><br></span>
+    <br>
+    <br>
+    <br><span lang="en-ca">&nbsp;</span><br><br>
+    </form>
+  
+
+  <% include partials/bottom_nav.ejs %>
+  <% include partials/footer.ejs %>
