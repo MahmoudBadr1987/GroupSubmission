@@ -22,16 +22,16 @@
     "nodemon": "^2.0.15",
     "popper.js": "^1.16.1"
   },
-  "description": "demo app for COMP229 Week 3",
+  "description": "demo portfolio for COMP229 Assignement1",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tsiliopoulos/COMP229-F2020-Week3.git"
+    "url": "git+https://github.com/MahmoudBadr1987/COMP229-Portfolio.git"
   },
   "author": "Tom Tsiliopoulos",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/tsiliopoulos/COMP229-F2020-Week3/issues"
+    "url": "https://github.com/MahmoudBadr1987/COMP229-Portfolio.git"
   },
-  "homepage": "https://github.com/tsiliopoulos/COMP229-F2020-Week3#readme"
+  "homepage": "https://github.com/MahmoudBadr1987/COMP229-Portfolio.git"
 }
