@@ -1,5 +1,5 @@
 {
-  "name": "comp229-f2020-week3",
+  "name": "comp229-assignment1-mahmoudeltoukhy",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -22,7 +22,7 @@
     "nodemon": "^2.0.15",
     "popper.js": "^1.16.1"
   },
-  "description": "demo portfolio for COMP229 Assignement1",
+  "description": " portfolio for COMP229 Assignement1",
   "main": "index.js",
   "repository": {
     "type": "git",
@@ -33,5 +33,12 @@
   "bugs": {
     "url": "https://github.com/MahmoudBadr1987/COMP229-Portfolio.git"
   },
-  "homepage": "https://github.com/MahmoudBadr1987/COMP229-Portfolio.git"
+  "homepage": "https://github.com/MahmoudBadr1987/COMP229-Portfolio.git",
+  "devDependencies": {},
+  "keywords": [
+    "Portfolio",
+    "for",
+    "COMP229",
+    "Assignment1"
+  ]
 }
