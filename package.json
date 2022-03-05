@@ -1,26 +1,34 @@
 {
-  "name": "comp229-personal-portfolio",
+  "name": "comp229-assignment2-authentication",
   "version": "0.0.1",
   "private": true,
   "scripts": {
     "start": "node ./server.js"
   },
   "engines": {
-    "node": "^12.18.3",
-    "npm": "^6.0.0"
+    "node": "^16.13.2",
+    "npm": "^8.1.2"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.14.0",
+    "@types/passport": "^1.0.7",
     "bootstrap": "^4.5.2",
+    "connect-flash": "^0.1.1",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "ejs": "~2.6.1",
     "express": "~4.16.1",
+    "express-session": "^1.17.2",
     "http-errors": "~1.6.3",
     "jquery": "^3.5.1",
+    "mongoose": "^6.2.3",
     "morgan": "~1.9.1",
     "nodemon": "^2.0.15",
-    "popper.js": "^1.16.1"
+    "passport": "^0.5.2",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^6.1.0",
+    "popper.js": "^1.16.1",
+    "save": "^2.4.0"
   },
   "description": " portfolio for COMP229 Assignement1",
   "main": "index.js",
@@ -34,12 +42,12 @@
     "url": "https://github.com/MahmoudBadr1987/COMP229-Portfolio.git"
   },
   "homepage": "https://github.com/MahmoudBadr1987/COMP229-Portfolio.git",
-  "devDependencies": {},
   "keywords": [
     "Mahmoud",
     "-",
     "Portfolio",
     "-",
     "Assignment1"
-  ]
+  ],
+  "devDependencies": {}
 }
