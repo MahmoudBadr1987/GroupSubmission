@@ -25,7 +25,7 @@ module.exports.displayProviderList = ( req , res , next ) =>
     })
 }
 
-
+// Display add page
 module.exports.displayAddPage = ( req , res , next ) =>
 {
     let newProvider = Provider();
@@ -64,8 +64,6 @@ module.exports.processAddPage = ( req , res , next ) =>
         }
     });
 }
-
-
 
 module.exports.displayEditPage = ( req , res , next ) => 
 {
