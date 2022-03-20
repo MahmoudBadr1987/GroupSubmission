@@ -7,13 +7,14 @@
     <div class ="row">
         <div class="col-md-offset-3 col-md-8">
             <h1> <%= title %> </h1>
-            <a href="/contact/add" class ="btn btn-primary" role = "button"><i class="fa-solid fa-plus"></i> Add a contact</a>
+            <a href="/provider/add" class ="btn btn-primary" role = "button"><i class="fa-solid fa-plus"></i> Add a new provider</a>
             <br>
             <br>
              <table class="table table-bordered table-striped table-hever">
                 <!- Header row-!>
                 <tr class ="d-flex">
                         <th class="text-center col-2"> Name </th>
+                        <th class="text-center col-2"> Qualifications </th>
                         <th class="text-center col-2"> Contact Number </th>
                         <th class="text-center col-4"> Email </th>  
                         <th class="text-center col-2"> Edit </th> 
@@ -25,18 +26,20 @@
                         <tr class= "d-flex"> 
                             <% if(typeof displayName == 'string' && displayName) { %>
                                 <td class="text-center col-2"><%= list[count].name%></td>
+                                <td class="text-center col-2"><%= list[count].qualifications%></td>
                                 <td class="text-center col-2"><%= list[count].contact_number%></td>
                                 <td class="text-center col-4"><%= list[count].email%></td>
                                 <td class="text-center col-2">
-                                    <a href="contact/edit/<%= list[count]._id %>" class="btn btn-primary btn-sm">
+                                    <a href="provider/edit/<%= list[count]._id %>" class="btn btn-primary btn-sm">
                                     <i class="fas fa-pencil-alt"></i> Edit</a>
                                 </td>
                                 <td class="text-center col-2">
-                                    <a href="/contact/delete/<%= list[count]._id %>" class="btn btn-danger btn-sm">
+                                    <a href="/provider/delete/<%= list[count]._id %>" class="btn btn-danger btn-sm">
                                     <i class="fas fa-trash-alt"></i> Delete</a>
                                 </td>
                             <% } else { %>    
                                 <td class="text-center col-2"><%= list[count].name%></td>
+                                <td class="text-center col-2"><%= list[count].qualifications%></td>
                                 <td class="text-center col-2"><%= list[count].contact_number%></td>
                                 <td class="text-center col-4"><%= list[count].email%></td> 
                                 <td class="text-center col-2">

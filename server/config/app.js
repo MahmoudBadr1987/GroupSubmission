@@ -30,11 +30,7 @@ mongoDB.once('open',  ()=>
 
 
 var indexRouter = require('../routes/index');
-var aboutRouter = require('../routes/about');
-var projectsRouter = require('../routes/projects');
-var contact_meRouter = require('../routes/contact_me');
-var servicesRouter = require('../routes/services');
-var contactRouter = require('../routes/contact');
+var providerRouter = require('../routes/provider');
 var usersRouter  = require('../routes/users');
 const { Passport } = require('passport');
 
@@ -80,11 +76,7 @@ passport.deserializeUser(User.deserializeUser());
 
 
 app.use('/', indexRouter);
-app.use('/about', aboutRouter);
-app.use('/projects', projectsRouter);
-app.use('/contact_me', contact_meRouter);
-app.use('/services', servicesRouter);
-app.use('/contact', contactRouter);
+app.use('/provider', providerRouter);
 
 
 // catch 404 and forward to error handler

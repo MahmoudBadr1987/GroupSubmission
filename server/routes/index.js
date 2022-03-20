@@ -12,28 +12,6 @@ router.get('/home', function(req, res, next) {
   res.render('index', { title: 'Home'});
 });
 
-/* GET About Us page. */
-router.get('/about', function(req, res, next) {
-  res.render('about', { title: 'About'});
-});
-
-/* GET Projects page. */
-router.get('/projects', function(req, res, next) {
-  res.render('projects', { title: 'Projects'});
-});
-
-/* GET Services page. */
-router.get('/services', function(req, res, next) {
-  res.render('services', { title: 'Services'});
-});
-
-/* GET Contact Me page. */
-router.get('/contact_me', function(req, res, next) {
-  res.render('contact_me', { title: 'Contact Me'});
-});
-
-
-
 // get route to display the login page
 router.get('/login',indexController.displayLoginPage );
 

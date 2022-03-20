@@ -12,27 +12,6 @@ module.exports.diplayHomePage = (req, res, next) =>
 res.render('index', {title:'Home'});
 }
 
-module.exports.diplayAboutPage = (req, res, next) =>
-{
-res.render('index', {title:'About'});
-}
-
-module.exports.diplayProductsPage = (req, res, next) =>
-{
-res.render('index', {title:'Products'});
-}
-
-module.exports.diplayServicesPage = (req, res, next) =>
-{
-res.render('index', {title:'Services'});
-}
-
-module.exports.diplayContactMePage = (req, res, next) =>
-{
-res.render('index', {title:'Contact-Me'});
-}
-
-
 
 
 module.exports.displayLoginPage = function(req, res, next) 

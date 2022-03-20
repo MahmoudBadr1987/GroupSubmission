@@ -5,8 +5,8 @@ let passport = require('passport');
 let User = require ('../models/user');
 
 // connect to our model 
-let Contact = require("../models/contact");
-let contactController = require ("../controllers/contact");
+let Provider = require("../models/provider");
+let providerController = require ("../controllers/provider");
 
 
 // helper function for guard purpose so that if someone copies and pastes the 
@@ -23,29 +23,29 @@ function requireAuth(req, res, next)
 
 
 ///////////////////////////////////////////  Load The List ///////////////////////////////////
-//  GET Route for the contact list
-router.get('/',contactController.displayContactList );
+//  GET Route for the provider list
+router.get('/',providerController.displayProviderList );
 
 
 /////////////////////////////////////////// CREATE Operation /////////////////////////////////
-//  GET Route for the contact list - CREATE Operation
+//  GET Route for the provider list - CREATE Operation
 
-router.get('/add',requireAuth,contactController.displayAddPage);
+router.get('/add',requireAuth,providerController.displayAddPage);
 
-//  POST Route for the contact list - CREATE Operation
-router.post('/add',requireAuth,contactController.processAddPage );
+//  POST Route for the provider list - CREATE Operation
+router.post('/add',requireAuth,providerController.processAddPage );
 
 
 /////////////////////////////////////////// UPDATE Operation /////////////////////////////////
-//  GET Route for the contact list - UPDATE Operation
-router.get('/edit/:id',requireAuth, contactController.displayEditPage);
+//  GET Route for the provider list - UPDATE Operation
+router.get('/edit/:id',requireAuth, providerController.displayEditPage);
 
-router.post('/edit/:id', requireAuth,contactController.processEditPage);
+router.post('/edit/:id', requireAuth,providerController.processEditPage);
 
 
 ////////////////////////////////////////////// DELETE Operation /////////////////////////////
 
-router.get('/delete/:id',requireAuth, contactController.performDelete);
+router.get('/delete/:id',requireAuth, providerController.performDelete);
 
 
 

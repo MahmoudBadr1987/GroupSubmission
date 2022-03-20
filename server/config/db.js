@@ -1,6 +1,6 @@
 module.exports =
 {
-     // "URI" :"mongodb://localhost/contact_list"
-       "URI": "mongodb+srv://Mahmoud:dSv8ntguhvJPLnel@mongodbserver.80enr.mongodb.net/contact_list?retryWrites=true&w=majority"
+      "URI" :"mongodb://localhost/providers_list"
+      // "URI" : "mongodb+srv://mahmoud:t6Ilmmi62VK3ImZP@mongodbserver.80enr.mongodb.net/contact_list?retryWrites=true&w=majority"
 
 }

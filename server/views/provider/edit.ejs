@@ -18,6 +18,11 @@
       </div>
  
       <div class="form-group">
+       <label for="qualifications">Qualifications</label>
+        <input type="text" class="form-control" id="qualifications" placeholder="Health Care Sector" name="qualifications"  value ="<%= contact.qualifications %>" required>
+      </div>
+
+      <div class="form-group">
         <label for="contact_number">Contact Number</label>
         <input type="Number" class="form-control" id="contact_number" placeholder="123456789" name="contact_number" value ="<%= contact.contact_number %>" required>
       </div>
@@ -31,7 +36,7 @@
   
       <button class="btn btn-primary" type="submit"><i class="fa-solid fa-edit"></i>Submit</button>
       <button class="btn btn-danger"><i class="fas fa-trash-alt"></i>Delete</button>
-      <a href ="/contact" class="btn btn-warning"><i class="fa-solid fa-arrow-right-from-bracket"></i> Exit</a>
+      <a href ="/provider" class="btn btn-warning"><i class="fa-solid fa-arrow-right-from-bracket"></i> Exit</a>
       
     </form>
 

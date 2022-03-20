@@ -3,11 +3,11 @@ let mongoose = require('mongoose');
 let router = express.Router();
 
 // connect to our model 
-let Contact = require("../models/contact");
+let Provider = require("../models/provider");
 
-module.exports.displayContactList = ( req , res , next ) =>
+module.exports.displayProviderList = ( req , res , next ) =>
 {
-    Contact.find((err, list) => 
+    Provider.find((err, list) => 
     {
         if (err)
         {
@@ -15,9 +15,9 @@ module.exports.displayContactList = ( req , res , next ) =>
         }
         else 
         {
-            res.render ("contact/list" , 
+            res.render ("provider/list" , 
             {
-                title: "Contact List",
+                title: "Providers List",
                 list: list, 
                 displayName: req.user ? req.user.displayName : ''
             });
@@ -28,29 +28,29 @@ module.exports.displayContactList = ( req , res , next ) =>
 
 module.exports.displayAddPage = ( req , res , next ) =>
 {
-    let newContact = Contact();
+    let newProvider = Provider();
     
-    res.render('contact/add', 
+    res.render('provider/add', 
     {
-        title: 'Add a contact info',
-        list: newContact,
+        title: 'Add a provider info',
+        list: newProvider,
         displayName: req.user ? req.user.displayName : ''  
     })
-    //  console.log(newContact);
+    //  console.log(newProvider);
 }
 
 
 module.exports.processAddPage = ( req , res , next ) =>
 {   
-    let newContact = Contact
-    ({
-    // "_id": req.body.id,    
+    let newProvider = Provider
+    ({    
     "name": req.body.name,
+    "qualifications": req.body.qualifications,
     "contact_number": req.body.contact_number,    
     "email": req.body.email
     });
     
-    Contact.create(newContact, (err,list)=>
+    Provider.create(newProvider, (err,list)=>
     {
         if(err)
         {
@@ -59,8 +59,8 @@ module.exports.processAddPage = ( req , res , next ) =>
         }
         else
         {
-            console.log(newContact);
-            res.redirect('/contact');
+            console.log(newProvider);
+            res.redirect('/provider');
         }
     });
 }
@@ -69,7 +69,7 @@ module.exports.processAddPage = ( req , res , next ) =>
 module.exports.displayEditPage = ( req , res , next ) => 
 {
     let id = req.params.id;
-    Contact.findById(id,(err,contactToEdit)=>
+    Provider.findById(id,(err,providerToEdit)=>
     {
         if(err)
         {
@@ -78,12 +78,13 @@ module.exports.displayEditPage = ( req , res , next ) =>
         }
         else
         {
-            res.render('contact/edit', 
+            res.render('provider/edit', 
             {
-                title: "Edit a contact", 
-                contact:contactToEdit,
+                title: "Edit a provider", 
+                provider: providerToEdit,
                 displayName: req.user ? req.user.displayName : ''
             });
+            console.log(providerToEdit);
         }
     });
 }
@@ -94,17 +95,18 @@ module.exports.processEditPage = ( req , res , next ) =>
 {
     let id = req.params.id
 
-    let updatedContact = Contact
+    let updatedProvider = Provider
     ({
         "_id": req.body.id,   
         "name": req.body.name,
+        "qualifications": req.body.qualifications,
         "contact_number": req.body.contact_number,    
         "email": req.body.email
     });
 
-    // console.log(updatedContact);
+    // console.log(updatedProvider);
 
-    Contact.updateOne({_id:id}, updatedContact , (err) =>
+    Provider.updateOne({_id:id}, updatedProvider , (err) =>
     {
         if(err)
         {
@@ -114,7 +116,7 @@ module.exports.processEditPage = ( req , res , next ) =>
         else
         {
             // console.log(req.body)
-            res.redirect("/contact");
+            res.redirect("/provider");
         }
     })    
 }
@@ -124,7 +126,7 @@ module.exports.processEditPage = ( req , res , next ) =>
 module.exports.performDelete = ( req , res , next ) => 
 {
     let id = req.params.id;
-    Contact.remove({_id:id}, (err) =>
+    Provider.remove({_id:id}, (err) =>
     {
         if(err)
         {
@@ -134,7 +136,7 @@ module.exports.performDelete = ( req , res , next ) =>
         else
         {
             console.log(req.body)
-            res.redirect("/contact");
+            res.redirect("/provider");
         }
     })
     
